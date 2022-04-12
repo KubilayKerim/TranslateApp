@@ -57,10 +57,10 @@ const App = () => {
         <TextInput value={originText} onChangeText={(value)=>{setOriginText(value)}} placeholder={source=='en'?'Enter your text here':'Metninizi buraya girin'} multiline={true} textAlignVertical='top' style={{ flex:1, width:'90%', }}>
         </TextInput>
         <View style={{ flex:1, width:'90%', }}>
-          <Pressable style={{backgroundColor:'blue', width:100, height:50, justifyContent:'center', alignItems:'center'}}
-          onPress={()=>translateTextRequest()}>
-            <Text style={{color:'white'}}>Translate</Text>
-          </Pressable>
+            <Pressable style={{backgroundColor: 'blue', width: 100, height: 50, justifyContent: 'center', alignItems: 'center' }}
+              onPress={() => translateTextRequest()}>
+              <Text style={{ color: 'white' }}>{source == 'en' ? "Translate" : "Çevir"}</Text>
+            </Pressable>
           <Text>{translatedText}</Text>
         </View>
       </View>
